@@ -1,17 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../actions";
+// using redux to have other components know in a very centrally accessible area what the state is
 
 class GoogleAuth extends React.Component {
   componentDidMount() {
+    // loads library, has a callback when process is complete
     window.gapi.load("client:auth2", () => {
+      // this is an async call, returns a promise
+
       window.gapi.client
         .init({
+          // initialize library with client id
           clientId:
             "305255746618-67cot3s1u51urrv0hu3jkb69e3brn36s.apps.googleusercontent.com",
           scope: "email"
+          // what we want to access in users profile
         })
+        // waits for the promise to return, only executes once entire gapi
+        // library is ready to go
         .then(() => {
+          // returns googleAuth object
           this.auth = window.gapi.auth2.getAuthInstance();
 
           this.onAuthChange(this.auth.isSignedIn.get());
@@ -20,7 +29,8 @@ class GoogleAuth extends React.Component {
         });
     });
   }
-
+  // change in state when signed in/out
+  // isSignedIn is the passed in function
   onAuthChange = isSignedIn => {
     if (isSignedIn) {
       this.props.signIn(this.auth.currentUser.get().getId());
@@ -28,7 +38,7 @@ class GoogleAuth extends React.Component {
       this.props.signOut();
     }
   };
-
+  //both cases are for when user is attempting to sign in/out
   onSignInClick = () => {
     this.auth.signIn();
   };
@@ -37,6 +47,7 @@ class GoogleAuth extends React.Component {
     this.auth.signOut();
   };
 
+  // renders button with logic
   renderAuthButton() {
     if (this.props.isSignedIn === null) {
       return null;
@@ -62,8 +73,10 @@ class GoogleAuth extends React.Component {
   }
 }
 
+// redux store communicates if user is signed in/out through props function
+// will return null,true,false
 const mapStateToProps = state => {
   return { isSignedIn: state.auth.isSignedIn };
 };
-
+// redux connect everything
 export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
