@@ -10,6 +10,8 @@ import {
   EDIT_STREAM
 } from "./types";
 
+// only call if users successfully signed in/out
+// action creator
 export const signIn = userId => {
   return {
     type: SIGN_IN,
@@ -23,11 +25,20 @@ export const signOut = () => {
   };
 };
 
+//since we know what the response of server is already, we can make action creators for all restful processes
+
+// has parameter with all information about comment
+// action creator for creating a comment
+// get states allows us to reach into redux store and get ID
 export const createStream = formValues => async (dispatch, getState) => {
   const { userId } = getState().auth;
   const response = await streams.post("/streams", { ...formValues, userId });
 
+  // axios return a bunch of different information
   dispatch({ type: CREATE_STREAM, payload: response.data });
+  // Do some programmatic navigation to
+  // get the user back to the root route
+  // push navigates the user
   history.push("/");
 };
 
