@@ -30,6 +30,7 @@ class StreamList extends React.Component {
   // follows standard coventions for returning list of items
   // for each comment we are returning some jsx
   renderList() {
+    // accesses each stream
     return this.props.streams.map(stream => {
       return (
         <div className="item" key={stream.id}>
