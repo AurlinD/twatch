@@ -8,6 +8,7 @@ class StreamList extends React.Component {
     this.props.fetchStreams();
   }
 
+  // checks if userID that is logged in is the same as ID of creator
   renderAdmin(stream) {
     if (stream.userId === this.props.currentUserId) {
       return (
@@ -26,6 +27,8 @@ class StreamList extends React.Component {
     }
   }
 
+  // follows standard coventions for returning list of items
+  // for each comment we are returning some jsx
   renderList() {
     return this.props.streams.map(stream => {
       return (
@@ -65,7 +68,8 @@ class StreamList extends React.Component {
     );
   }
 }
-
+// Object.values is built in JS function, take object as argument, all values in object gets pulled out into an array.
+// thus keys dissapear, usually want to have array for mapStateToProps
 const mapStateToProps = state => {
   return {
     streams: Object.values(state.streams),
