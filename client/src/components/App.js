@@ -8,6 +8,7 @@ import StreamShow from "./streams/StreamShow";
 import Header from "./Header";
 import history from "../history";
 
+// the : allows us to put anything at that spot.
 const App = () => {
   return (
     <div className="ui container">
