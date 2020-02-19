@@ -1,3 +1,10 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "hallo",
+      "description": "hi",
+      "userId": "117010749133917405319",
+      "id": 1
+    }
+  ]
 }
