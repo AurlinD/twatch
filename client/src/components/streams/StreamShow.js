@@ -30,6 +30,7 @@ class StreamShow extends React.Component {
       return;
     }
 
+    // standard flv video implementation
     const { id } = this.props.match.params;
     this.player = flv.createPlayer({
       type: "flv",
