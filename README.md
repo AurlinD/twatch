@@ -1,5 +1,6 @@
 # twitch
 
+This Project requires OBS to send its content to rtmp://localhost/live with streamkey password to be 1 (for the first stream).
 
 This project was bootstrapped with Create React App.
 
