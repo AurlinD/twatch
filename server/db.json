@@ -1,10 +1,16 @@
 {
   "streams": [
     {
-      "title": "hallo",
-      "description": "hi",
+      "title": "Welcome to my stream",
+      "description": "Educational stream",
       "userId": "117010749133917405319",
       "id": 1
+    },
+    {
+      "title": "Gaming Channel",
+      "description": "Let's play minecraft!",
+      "userId": "115170347850770087701",
+      "id": 2
     }
   ]
 }
