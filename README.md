@@ -1,60 +1,58 @@
-# twitch
+# message Alt
 
-This Project requires OBS to send its content to rtmp://localhost/live with streamkey password to be 1 (for the first stream).
+A streaming hub that a user can display a title and description for users to click on and view their stream.
 
-This project was bootstrapped with Create React App.
+## Features 
 
-Available Scripts
-In the project directory, you can run:
+- Sign in/out through Google Cloud Platform for each user. 
+- View a list of clickable streams that have titles and description of the stream.
+- Edit your own stream.
+- Delete your own stream.
+- Watch a users stream.
 
+
+## Final Product
+
+!["Sign In/out Google Functionality"](docs/Google.png)
+
+!["Main screen functionality"](docs/Main-Screen.png)
+
+!["Edit message"](docs/edit-comment.png)
+
+!["Delete message"](docs/delete-comment.png)
+
+## Getting Started
+
+1. Fork this repository, then clone it.
+2. Install the dependencies using the `npm install` command.
+3. Start the server using `npm start`.
+3. Start the client using `npm start`. The app will be served at <http://localhost:3000/>.
+4. Go to <http://localhost:3000/> in your browser.
+
+## Run the  server folder
+
+```sh
 npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+```
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## Run the client folder
 
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+```sh
+npm start
+```
 
-npm run build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+- axios
+- flv.js
+- lodash
+- react
+- react-dom
+- react-redux
+- react-router-dom
+- react-scripts
+- faker
+- redux
+- redux-form
+- redux-thunk
 
-See the section about deployment for more information.
-
-npm run eject
-Note: this is a one-way operation. Once you eject, you can’t go back!
-
-If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-Learn More
-You can learn more in the Create React App documentation.
-
-To learn React, check out the React documentation.
-
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-npm run build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
