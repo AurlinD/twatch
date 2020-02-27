@@ -15,19 +15,23 @@ A streaming hub that a user can display a title and description for users to cli
 
 !["Sign In/out Google Functionality"](docs/Google.png)
 
-!["Main screen functionality"](docs/Main-Screen.png)
+!["Main screen functionality"](docs/main-screen.png)
 
-!["Edit message"](docs/edit-comment.png)
+!["Edit message"](docs/edit-channel.png)
 
-!["Delete message"](docs/delete-comment.png)
+!["Delete message"](docs/delete-channel.png)
+
+!["Stream Showing"](docs/stream-showing.png)
 
 ## Getting Started
 
 1. Fork this repository, then clone it.
 2. Install the dependencies using the `npm install` command.
 3. Start the server using `npm start`.
-3. Start the client using `npm start`. The app will be served at <http://localhost:3000/>.
-4. Go to <http://localhost:3000/> in your browser.
+3. Start the rtmpserver using `npm start`. 
+4. Start OBS, goto settings, stream, service = Custom, server = rtmp://localhost/live, Stream Key = 1 (this will show the stream in the first stream link you have provided in the browser.
+6. Start the client using `npm start`. The app will be served at <http://localhost:3000/>.
+7. Go to <http://localhost:3000/> in your browser.
 
 ## Run the  server folder
 
@@ -36,6 +40,12 @@ npm start
 ```
 
 ## Run the client folder
+
+```sh
+npm start
+```
+
+## Run the rtmp folder
 
 ```sh
 npm start
@@ -51,7 +61,6 @@ npm start
 - react-redux
 - react-router-dom
 - react-scripts
-- faker
 - redux
 - redux-form
 - redux-thunk
