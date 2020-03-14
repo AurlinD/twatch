@@ -1,4 +1,4 @@
-# message Alt
+# Twitch
 
 A streaming hub that a user can display a title and description for users to click on and view their stream.
 
